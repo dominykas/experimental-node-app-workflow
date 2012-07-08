@@ -4,7 +4,7 @@ if (typeof define !== 'function') {
 
 define(function() {
 
-	var dec2roman = function(digit) {
+	return function (digit) {
 
 		var result = '';
 
@@ -22,15 +22,13 @@ define(function() {
 			[5, 'v'],
 			[4, 'iv'],
 			[1, 'i']
-		].forEach(function(x) {
-			while (digit >= x[0]) {
-				result += x[1];
-				digit -= x[0];
-			};
-		});
+		].forEach(function (x) {
+				while (digit >= x[0]) {
+					result += x[1];
+					digit -= x[0];
+				}
+			});
 
 		return result;
 	};
-
-	return dec2roman;
 });
