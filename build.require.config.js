@@ -4,7 +4,8 @@
     //name: "almond.js",
     //optimize: "none",
     include: [
-    	"src/dec2roman"
+    	"src/dec2roman",
+	    "src/roman2dec"
     ],
     out: "min/all.js"
 })
