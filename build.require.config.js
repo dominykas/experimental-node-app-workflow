@@ -1,7 +1,7 @@
 ({
 	baseUrl: "./",
 	name: "almond.js",
-	optimize: "none",
+	//optimize: "none",
 	include: [
 		"src/dec2roman-common",
 		"src/roman2dec-common",

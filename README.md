@@ -16,3 +16,9 @@ Very much a work in progress.
 * [requirejs](http://requirejs.org/)
 * [amdefine](https://github.com/jrburke/amdefine)
 * [almond](https://github.com/jrburke/almond)
+
+## Notes to self ##
+* @todo: build.require.config.js has to have everything listed out explicitly - do some wildcard magic like in buster.js?
+* Problem: amdefine boilerplate is PITA
+* Problem: test boilerplate is PITA - require(amdefine, buster); test name for buster; module name for define
+* Buster issue #223: https://github.com/busterjs/buster/issues/223
