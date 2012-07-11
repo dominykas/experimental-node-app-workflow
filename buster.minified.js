@@ -4,12 +4,14 @@ config["Browser tests"] = {
     rootPath: ".",
     environment: "browser",
     sources: [
+	    "min/all.js",
     ],
     tests: [
-        "test/*-test.js"
+	    "test/*-test.js"
     ],
     libs: [
-        "min/all.js",
+	    "min/all.js",
+	    "test/*-test.js"
     ],
     extensions: [require("buster-amd")]
 };

@@ -1,7 +1,6 @@
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
 
-// @todo: why can't I just require dec2roman here?
-define(["../src/dec2roman", "../src/roman2dec"], function(dec2roman, roman2dec){
+define(["./dec2roman", "./roman2dec"], function(dec2roman, roman2dec){
 
 	function convert(input)
 	{

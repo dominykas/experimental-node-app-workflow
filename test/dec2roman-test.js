@@ -1,7 +1,7 @@
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
 if (typeof buster === 'undefined') { var buster = require("buster"); }
 
-define(["../src/dec2roman"], function(dec2roman) {
+define("test/dec2roman-test", ["../src/dec2roman"], function(dec2roman) {
 	var testCases = {};
 
 	[
@@ -37,4 +37,5 @@ define(["../src/dec2roman"], function(dec2roman) {
 	});
 
 	buster.testCase("dec2roman", testCases);
+
 });
