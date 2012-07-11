@@ -1,10 +1,8 @@
-if (typeof define !== 'function') {
-    var define = require('amdefine')(module);
-}
+if (typeof define !== 'function') { var define = require('amdefine')(module); }
 
 define(function() {
 
-	return function (digit) {
+	function convert(digit) {
 
 		var result = '';
 
@@ -30,5 +28,7 @@ define(function() {
 			});
 
 		return result;
-	};
+	}
+
+	return {convert:convert};
 });

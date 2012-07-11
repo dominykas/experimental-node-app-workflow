@@ -5,7 +5,8 @@
     //optimize: "none",
     include: [
     	"src/dec2roman",
-	    "src/roman2dec"
+	    "src/roman2dec",
+	    "src/any2any"
     ],
     out: "min/all.js"
 })

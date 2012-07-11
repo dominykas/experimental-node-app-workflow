@@ -32,7 +32,7 @@ define(["../src/roman2dec"], function(roman2dec) {
 			var input = v[0], expected = v[1];
 			testCases["should return "+expected+" when "+input] = function()
 			{
-				assert.equals(roman2dec(input), expected);
+				assert.equals(roman2dec.convert(input), expected);
 			}
 
 		});

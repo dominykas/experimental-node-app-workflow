@@ -1,10 +1,8 @@
-if (typeof define !== 'function') {
-	var define = require('amdefine')(module);
-}
+if (typeof define !== 'function') { var define = require('amdefine')(module); }
 
 define(function() {
 
-	return function (digit) {
+	function convert(digit) {
 
 		var romans = {
 			'm': [1000],
@@ -31,5 +29,7 @@ define(function() {
 		} while (i < digit.length);
 
 		return sum;
-	};
+	}
+
+	return {convert:convert};
 });
