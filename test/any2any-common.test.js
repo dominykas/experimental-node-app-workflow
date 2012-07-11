@@ -1,7 +1,7 @@
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
 if (typeof buster === 'undefined') { var buster = require("buster"); }
 
-define("test/any2any-test", ["../src/any2any", "../src/roman2dec", "../src/dec2roman"], function(any2any, roman2dec, dec2roman) {
+define("test/any2any-common.test", ["../src/any2any-common", "../src/roman2dec-common", "../src/dec2roman-common"], function(any2any, roman2dec, dec2roman) {
 
 	buster.testCase("any2any", {
 
