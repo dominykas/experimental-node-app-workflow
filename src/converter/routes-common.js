@@ -2,16 +2,21 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
 
 define(function(){
 
-	return {
-		"node" : {
-			"/d2r" : "d2r",
-			"/r2d" : "r2d",
-			"/a2a" : "a2a"
+	return [
+		{
+			route: "/d2r",
+			name: "d2r",
+			browser: true
 		},
-		"browser" : {
-			"/d2r" : "d2r",
-			"/r2d" : "r2d"
+		{
+			route: "/r2d",
+			name: "r2d",
+			browser: true
+		},
+		{
+			route: "/a2a",
+			name: "a2a"
 		}
-	};
+	];
 
 });

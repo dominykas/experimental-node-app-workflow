@@ -18,10 +18,10 @@ function myRes(req, res) {
 	}
 }
 
-function handle(method, module, handlerName) {
+function handleFunc(method, pkg, route) {
 
 	return function(req, res, next) {
-		var handler = require("./"+module+"/"+handlerName+"-node");
+		var handler = require("./"+pkg+"/"+route.name+"-node");
 		if (handler[method]) {
 			handler[method](req, myRes(req, res));
 		} else {
@@ -31,20 +31,9 @@ function handle(method, module, handlerName) {
 
 }
 
-function register(module) {
-	var routes = require("./"+module+"/routes-common.js").node;
-	for(var r in routes) {
-		app.get(r, handle("GET", module, routes[r]));
-		app.post(r, handle("POST", module, routes[r]));
-	}
-}
+function register(pkg) { require('./util/registrar-node').register(app, pkg, handleFunc); }
 
-
-app.get('/', function(req, res) {
-	myRes(req, res).render("index");
-});
-
+register("home");
 register("converter");
-
 
 app.listen(1337);
