@@ -1,7 +1,6 @@
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
-if (typeof buster === 'undefined') { var buster = require("buster"); }
 
-define("test/sample-browser.test", ["../src/sample-browser"], function(sample) {
+define("test/sample-browser.test", ["buster", "../src/sample-browser"], function(buster, sample) {
 
 	buster.testCase("sample", {
 

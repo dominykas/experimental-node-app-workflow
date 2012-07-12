@@ -1,7 +1,6 @@
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
-if (typeof buster === 'undefined') { var buster = require("buster"); }
 
-define("test/sample-node.test", ["../src/sample-node"], function(sample) {
+define("test/sample-node.test", ["buster", "../src/sample-node"], function(buster, sample) {
 
 	buster.testCase("sample", {
 
