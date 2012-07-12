@@ -7,7 +7,7 @@
 		"src/roman2dec-common",
 		"src/any2any-common",
 		"src/sample-browser",
-		"src/sample-node"
+		"src/converter/routes-common"
 	],
 	out: "min/all.js"
 })
