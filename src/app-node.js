@@ -1,9 +1,13 @@
-var app = require('express').createServer();
+var express = require('express'),
+	app = express.createServer();
 
 app.configure(function(){
 	app.set("views", __dirname+"/views");
 	app.set('view engine', 'hbs');
 	require("./util/partials-node").register(__dirname+"/views");
+
+	app.use(express.static(__dirname + '/../'));
+//	app.use(express.static(__dirname + '/../min/'));
 });
 
 function myRes(req, res) {
@@ -31,9 +35,8 @@ function handleFunc(method, pkg, route) {
 
 }
 
-function register(pkg) { require('./util/registrar-node').register(app, pkg, handleFunc); }
-
-register("home");
-register("converter");
+require("./packages-common").forEach(function (pkg) {
+	require('./util/registrar-node').register(app, pkg, handleFunc);
+});
 
 app.listen(1337);

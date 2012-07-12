@@ -8,7 +8,10 @@
 		"src/any2any-common",
 		"src/sample-browser",
 		"src/converter/routes-common",
-		"src/index/routes-common"
+		"src/home/routes-common",
+		"src/packages-common",
+		"src/app-browser"
 	],
+	insertRequire: ["src/app-browser"],
 	out: "min/all.js"
 })
