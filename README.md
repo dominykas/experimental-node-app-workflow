@@ -21,9 +21,6 @@ Very much a work in progress.
 * [hbs](https://github.com/donpark/hbs)
 
 ## Notes to self ##
-* @todo: build.require.config.js has to have everything listed out explicitly - do some wildcard magic like in buster.js?
 * Problem: amdefine boilerplate is PITA
 * Problem: test boilerplate is PITA - test name for buster; module name for define
 * Is there a better file naming scheme than -common/-browser/-node?
-* Buster issue #223: https://github.com/busterjs/buster/issues/223
-* Buster issue #224: https://github.com/busterjs/buster/issues/224
