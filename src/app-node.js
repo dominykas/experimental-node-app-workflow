@@ -14,6 +14,7 @@ function myRes(req, res) {
 	return {
 		render: function(view, data) {
 			data = data || {};
+			data.lang = req.params.lang || 'en'; // @todo: defaultLanguage
 			data.title = data.title || "Home";
 			data.footerUrl = req.url;
 

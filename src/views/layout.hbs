@@ -5,10 +5,11 @@
 	</head>
 	<body>
 		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/d2r">Decimal to Roman</a></li>
-			<li><a href="/r2d">Roman to Decimal</a></li>
-			<li><a href="/a2a">Any to any</a></li>
+			<!-- @todo: link helper, duplicate content at /en and / -->
+			<li><a href="/{{lang}}">Home</a></li>
+			<li><a href="/{{lang}}/d2r">Decimal to Roman</a></li>
+			<li><a href="/{{lang}}/r2d">Roman to Decimal</a></li>
+			<li><a href="/{{lang}}/a2a">Any to any</a></li>
 		</ul>
 
 		<h1>{{title}}</h1>
@@ -17,7 +18,7 @@
 
 		{{> _footer}}
 
-		<script data-main="src/app-browser" src="/node_modules/requirejs/require.js"></script>
+		<script data-main="/src/app-browser" src="/node_modules/requirejs/require.js"></script>
 		<!--<script data-main="src/app-browser" src="/all.js"></script>-->
 	</body>
 </html>
