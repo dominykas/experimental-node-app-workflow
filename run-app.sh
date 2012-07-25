@@ -1,3 +1,3 @@
 cd src
-node app-node
+node app.node
 cd ..

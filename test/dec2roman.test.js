@@ -1,6 +1,6 @@
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
 
-define("test/dec2roman-common.test", ["buster", "../src/dec2roman-common"], function(buster, dec2roman) {
+define("test/dec2roman.test", ["buster", "../src/dec2roman"], function(buster, dec2roman) {
 	var testCases = {};
 
 	[

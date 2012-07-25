@@ -4,8 +4,8 @@ config["Node tests"] = {
 	rootPath:".",
 	environment:"node",
 	tests:[
-		"test/**/*-common.test.js",
-		"test/**/*-node.test.js"
+		"test/**/*.test.node.js",
+		"test/**/*.test.js"
 	]
 };
 
@@ -13,12 +13,10 @@ config["Browser tests"] = {
 	rootPath:".",
 	environment:"browser",
 	sources:[
-		"src/**-common.js",
-		"src/**-browser.js"
+		"src/**/*.js"
 	],
 	tests:[
-		"test/**-common.test.js",
-		"test/**-browser.test.js"
+		"test/**/*.test.js"
 	],
 	libs:[
 		"node_modules/requirejs/require.js"

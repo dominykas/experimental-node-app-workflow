@@ -9,7 +9,7 @@ define(function(){
 			data.title = "Decimal to Roman";
 			 if (req.query.num) {
 				data.input = req.query.num;
-				data.result = require('../dec2roman-common').convert(req.query.num);
+				data.result = require('../dec2roman').convert(req.query.num);
 			}
 			res.render("form", data);
 		}

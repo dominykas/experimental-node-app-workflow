@@ -1,8 +1,8 @@
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
 
-define("test/converter/d2r-node.test", ["buster", "../../src/converter/d2r-node", "../../src/dec2roman-common"], function(buster, d2r, dec2roman){
+define("test/converter/d2r.test.node", ["buster", "../../src/converter/d2r.node", "../../src/dec2roman"], function(buster, d2r, dec2roman){
 
-	buster.testCase("d2r-node", {
+	buster.testCase("d2r.node", {
 
 		"should render view": function() {
 			var res = {render: this.stub()};

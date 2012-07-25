@@ -7,8 +7,7 @@ config["Browser tests"] = {
 		"min/all.js"
 	],
 	tests:[
-		"test/**-common.test.js",
-		"test/**-browser.test.js"
+		"test/**/*.test.js"
 	],
 	libs:[
 	],

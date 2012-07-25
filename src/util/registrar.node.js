@@ -16,7 +16,7 @@ define(function(){
 	return {
 		register: function(app, pkg, handlerFunc)
 		{
-			var routes = require("../"+pkg+"/routes-common.js");
+			var routes = require("../"+pkg+"/routes.js");
 			for(var i in routes) {
 				var r = routes[i];
 				app.get(decorate(r.route), handlerFunc("GET", pkg, r));

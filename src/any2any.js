@@ -1,6 +1,6 @@
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
 
-define(["./dec2roman-common", "./roman2dec-common"], function(dec2roman, roman2dec){
+define(["./dec2roman", "./roman2dec"], function(dec2roman, roman2dec){
 
 	function convert(input)
 	{

@@ -18,7 +18,11 @@
 
 		{{> _footer}}
 
-		<script data-main="/src/app-browser" src="/node_modules/requirejs/require.js"></script>
-		<!--<script data-main="src/app-browser" src="/all.js"></script>-->
+		{{#if useMinified}}
+		<script src="/all.js"></script>
+		{{else}}
+		<script data-main="/src/app" src="/node_modules/requirejs/require.js"></script>
+		{{/if}}
+
 	</body>
 </html>
