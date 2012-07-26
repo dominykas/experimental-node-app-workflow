@@ -4,9 +4,9 @@ var express = require('express'),
 var useMinified = true;
 
 app.configure(function(){
-	app.set("views", __dirname+"/views");
+	app.set("views", __dirname);
 	app.set('view engine', 'hbs');
-	require("./util/partials.node").register(__dirname+"/views");
+	require("./util/partials.node").register(__dirname);
 
 	if (useMinified) {
 		app.use(express.static(__dirname + '/../min/'));

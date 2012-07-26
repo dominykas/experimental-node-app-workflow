@@ -10,7 +10,7 @@ define("test/converter/d2r.test.node", ["buster", "../../src/converter/d2r.node"
 			d2r.GET({query:{}}, res);
 
 			assert.calledOnce(res.render);
-			assert.calledWith(res.render, "form", {
+			assert.calledWith(res.render, "converter/form", {
 				title: "Decimal to Roman"
 			});
 		},
@@ -22,7 +22,7 @@ define("test/converter/d2r.test.node", ["buster", "../../src/converter/d2r.node"
 			d2r.GET({query:{num:3}}, res);
 
 			assert.calledOnce(res.render);
-			assert.calledWith(res.render, "form", {
+			assert.calledWith(res.render, "converter/form", {
 				title: "Decimal to Roman",
 				input: 3,
 				result: 'iii'
