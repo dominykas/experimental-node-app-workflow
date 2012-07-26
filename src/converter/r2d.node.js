@@ -12,7 +12,7 @@ define(function(){
 				data.input = req.query.num;
 				data.result = require('../roman2dec').convert(req.query.num);
 			}
-			res.render("form", data);
+			res.render("converter/form", data);
 		}
 
 	};

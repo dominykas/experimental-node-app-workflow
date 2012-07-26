@@ -11,7 +11,7 @@ define(function(){
 				data.input = req.query.num;
 				data.result = require('../dec2roman').convert(req.query.num);
 			}
-			res.render("form", data);
+			res.render("converter/form", data);
 		}
 
 	};

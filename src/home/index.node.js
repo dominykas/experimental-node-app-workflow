@@ -4,7 +4,7 @@ define(function(){
 
 	return {
 		GET: function(req, res) {
-			res.render("index");
+			res.render("home/index");
 		}
 	}
 
