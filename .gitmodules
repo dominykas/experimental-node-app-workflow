@@ -1,3 +1,6 @@
 [submodule "externals/almond"]
 	path = externals/almond
 	url = git://github.com/jrburke/almond.git
+[submodule "externals/require-hbs"]
+	path = externals/require-hbs
+	url = git://github.com/SlexAxton/require-handlebars-plugin.git
