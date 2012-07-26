@@ -1,7 +1,7 @@
 var express = require('express'),
 	app = express.createServer();
 
-var useMinified = true;
+var useMinified = false;
 
 app.configure(function(){
 	app.set("views", __dirname);
@@ -12,6 +12,7 @@ app.configure(function(){
 		app.use(express.static(__dirname + '/../min/'));
 	} else {
 		app.use(express.static(__dirname + '/../'));
+		app.use(express.static(__dirname + '/../externals/'));
 	}
 });
 

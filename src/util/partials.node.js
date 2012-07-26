@@ -8,7 +8,7 @@ define(["fs", "path", "hbs", "glob"], function(fs, path, hbs, glob){
 		// loads partials from a directory
 		cb = cb || throwErrors;
 
-		glob("**/_*.hbs", {cwd: directory}, function(err, matches){
+		glob("**/*.partial.hbs", {cwd: directory}, function(err, matches){
 
 			var remaining = matches.length;
 			matches.forEach(function(file) {
@@ -23,7 +23,7 @@ define(["fs", "path", "hbs", "glob"], function(fs, path, hbs, glob){
 
 	function formatPartialName(file)
 	{
-		return file.replace(/\.\w+$/, "").replace(/\//, "_").replace(/_+/,"_").replace(/^_/, "");
+		return file.replace(/\.\w+$/, "").replace(/\//, "_");
 	}
 
 	function partial(file, directory, cb) {
