@@ -4,7 +4,7 @@ INCLUDES=`find src -type f \( -iname "*.js" ! -iname "*.node.js" \) | sed 's/\.j
 
 node_modules/.bin/r.js -o \
 	baseUrl=. \
-	name=lib/almond.js \
+	name=externals/almond/almond.js \
 	insertRequire=src/app \
 	out=min/all.js \
 	include=$INCLUDES \
