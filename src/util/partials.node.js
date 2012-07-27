@@ -4,11 +4,11 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
 // loosely based on https://github.com/donpark/hbs/pull/11
 define(["fs", "path", "hbs", "glob"], function(fs, path, hbs, glob){
 
-	function partials(directory, cb) {
+	function partials(directory, globString, cb) {
 		// loads partials from a directory
 		cb = cb || throwErrors;
 
-		glob("**/*.partial.hbs", {cwd: directory}, function(err, matches){
+		glob(globString, {cwd: directory}, function(err, matches){
 
 			var remaining = matches.length;
 			matches.forEach(function(file) {
@@ -23,7 +23,7 @@ define(["fs", "path", "hbs", "glob"], function(fs, path, hbs, glob){
 
 	function formatPartialName(file)
 	{
-		return file.replace(/\.\w+$/, "").replace(/\//, "_");
+		return file.replace(/\.\w+$/, "").replace(/\//g, "_");
 	}
 
 	function partial(file, directory, cb) {

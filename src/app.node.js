@@ -6,7 +6,7 @@ var useMinified = false;
 app.configure(function(){
 	app.set("views", __dirname);
 	app.set('view engine', 'hbs');
-	require("./util/partials.node").register(__dirname);
+	require("./util/partials.node").register(__dirname + "/../", "src/**/*.partial.hbs");
 
 	if (useMinified) {
 		app.use(express.static(__dirname + '/../min/'));

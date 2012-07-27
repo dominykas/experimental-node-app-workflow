@@ -1,13 +1,6 @@
 INCLUDES=`find src -type f \( -iname "*.js" ! -iname "*.node.js" \) | sed 's/\.js$//' | paste -sd "," -`
+HBS=`find src -type f \( -iname "*.hbs" \) | sed 's/^\(.*\)\.hbs$/hbs\!\1/' | paste -sd "," -`
 
-#node_modules/.bin/handlebars  -r src/views -m src/views/*
-
-node_modules/.bin/r.js -o \
-	baseUrl=. \
-	name=externals/almond/almond.js \
-	insertRequire=src/app \
-	out=min/all.js \
-	include=$INCLUDES \
-	#optimize=none
+node_modules/.bin/r.js -o require.build.js include=$INCLUDES,$HBS
 
 buster test --config buster.minified.js
