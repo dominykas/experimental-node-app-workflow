@@ -34,3 +34,5 @@ The file names in ```test``` folder should map directly to file names in ```src`
 ## Notes to self ##
 * Problem: amdefine boilerplate is PITA
 * Problem: test boilerplate is PITA - test name for buster; module name for [am]define
+* Problem: three copies of handlebars - externals/runtime, externals/hbs, node_modules
+* @todo: use runtime version of handlebars

@@ -5,17 +5,17 @@
 	mainConfigFile: "src/app.js",
 	out: 'min/all.js',
 
-	optimize: 'none',
+	//optimize: 'none',
 
 	inlineText: true,
 
 	pragmasOnSave: {
 		//removes Handlebars.Parser code (used to compile template strings) set
 		//it to `false` if you need to parse template strings even after build
-		excludeHbsParser : true,
+		excludeHbsParser: true,
 		// kills the entire plugin set once it's built.
 		excludeHbs: true,
-		// removes i18n precompiler, handlebars and json2
+		// removes i18n precompiler, underscore and json2
 		excludeAfterBuild: true
 	},
 
