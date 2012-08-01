@@ -83,7 +83,7 @@ function doStuff(failInner, failOuter) {
 	return myPromise.promise;
 }
 
-define("test/sample-q.node.test", ["buster"], function (buster) {
+define("test/sample-q.test.node", ["buster"], function (buster) {
 
 	buster.testCase("sample-q.node", {
 
