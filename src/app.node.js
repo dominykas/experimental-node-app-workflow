@@ -1,5 +1,5 @@
 var express = require('express'),
-	app = express.createServer();
+	app = express();
 
 var useMinified = false;
 
